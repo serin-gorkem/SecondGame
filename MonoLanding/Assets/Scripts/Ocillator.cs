@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ocillator : MonoBehaviour
@@ -12,21 +10,17 @@ public class Ocillator : MonoBehaviour
     void Start()
     {
         startingPosition = transform.position; //current position
-        
-
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Period <= Mathf.Epsilon){return;}
-        float cycles = Time.time / Period; // geçen zamanı 2 ye bölüp tam bir döngüyü buluyoruz.
+        if (Period <= Mathf.Epsilon) { return; }
+        float cycles = Time.time / Period; //We are dividing passed time to the period.
 
-        const float tau = Mathf.PI *2; // pi gibi özel bir değer "tau".6.283
-        float rawSinWawe = Mathf.Sin(cycles * tau); //döngü ile tau çarpılıp -1 ve 1 arasında gidip gelmesi sağlanıyor.
+        const float tau = Mathf.PI * 2; //a constant like Pi "tau" and it's 6.283.. or 2pi.
+        float rawSinWawe = Mathf.Sin(cycles * tau); //cycle multipiled by tau so the Wawe we created can go between -1 and 1.
 
-        movementFactor = (rawSinWawe +1f)/2; // -1 den 1 e gideceğine 0 dan 1 e gitsin.
-        
+        movementFactor = (rawSinWawe + 1f) / 2; //We are adjusting Wawe so it can go from 0 to 1.
+
         Vector3 offset = movementVector * movementFactor;
         transform.position = startingPosition + offset;
     }

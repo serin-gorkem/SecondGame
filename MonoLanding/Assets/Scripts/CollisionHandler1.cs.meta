@@ -3,7 +3,11 @@ guid: 9e12fb5994ed7be4fabdb26909790d80
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - crash: {fileID: 8300000, guid: 0dc738f6e4d21ca4f803bfd3ca5618be, type: 3}
+  - win: {fileID: 8300000, guid: 56eaa7f002dd36a47b356c8c165ef4be, type: 3}
+  - crashParticles: {fileID: 198204746014789312, guid: ab79a37535b979f48b6de56e3a0a5cb0, type: 3}
+  - winParticles: {fileID: 198631066050499358, guid: 62198a3a5dbb64a4f9e1618929224faa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

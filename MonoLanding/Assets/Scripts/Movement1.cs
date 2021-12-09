@@ -52,7 +52,7 @@ public class Movement1 : MonoBehaviour
 
     private void StartThrusting()
     {
-        rb.AddRelativeForce(Vector3.up * thrustForce * Time.deltaTime);
+        rb.AddRelativeForce(Vector3.up * thrustForce * Time.deltaTime); //Vector3.up is (0.1.0)
 
         if (!sound.isPlaying)
         {
@@ -79,7 +79,7 @@ public class Movement1 : MonoBehaviour
     {
         rb.AddRelativeForce(Vector3.up * -thrustForce * Time.deltaTime);
 
-             if (!sound.isPlaying)
+        if (!sound.isPlaying)
         {
             sound.PlayOneShot(mainEngine);
         }
@@ -98,7 +98,7 @@ public class Movement1 : MonoBehaviour
         if (!Engine4Particles.isPlaying)
         {
             Engine4Particles.Play();
-        }   
+        }
     }
     private void StopThrusting()
     {
@@ -148,8 +148,8 @@ public class Movement1 : MonoBehaviour
 
     void ApplyRotation(float rotationThisFrame)
     {
-        rb.freezeRotation = true; // freezing rotation so we can manually rotate
+        rb.freezeRotation = true;  // freezing rotation so we can manually rotate
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false;// We are unfreezing so we can control normal
+        rb.freezeRotation = false; // We are unfreezing so we can control normal
     }
 }

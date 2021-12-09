@@ -3,7 +3,14 @@ guid: c39b1d0de2d30f64cb4c11dbb2362bff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mainEngine: {fileID: 8300000, guid: 7327b9200f0886b44b7c5d1518439b6d, type: 3}
+  - Left_EngineParticles: {instanceID: 0}
+  - RightEngineParticles: {instanceID: 0}
+  - Engine1Particles: {instanceID: 0}
+  - Engine2Particles: {instanceID: 0}
+  - Engine3Particles: {instanceID: 0}
+  - Engine4Particles: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
